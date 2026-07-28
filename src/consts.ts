@@ -1,33 +1,35 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'ProCleaning';
-export const SITE_DESCRIPTION = 'Specialized, efficient, and thorough cleaning services';
+export const SITE_TITLE = "Sedot WC Alam Jaya | Jasa Sedot WC Tangerang 24 Jam";
+
+export const SITE_DESCRIPTION =
+  "Jasa Sedot WC Tangerang 24 Jam. Melayani sedot WC, sedot septic tank, saluran mampet, dan pembersihan limbah dengan respon cepat dan harga transparan.";
 
 
 export const NAV_MENU = [
-    {
-        url: "/",
-        title: "Home"
-    },
-    {
-        url: "#",
-        title: "About us"
-    },
-    {
-        url: "/service",
-        title: "Service"
-    },
-    {
-        url: "/team",
-        title: "Team"
-    },
-    {
-        url: "/blog",
-        title: "Blog"
-    },
-     {
-        url: "/contact",
-        title: "Contact"
-    }
+  {
+    title: "Beranda",
+    url: "#hero",
+  },
+  {
+    title: "Layanan",
+    url: "#services",
+  },
+  {
+    title: "Area Layanan",
+    url: "#area",
+  },
+  {
+    title: "Harga",
+    url: "#pricing",
+  },
+  {
+    title: "FAQ",
+    url: "#faq",
+  },
+  {
+    title: "Kontak",
+    url: "#contact",
+  },
 ];

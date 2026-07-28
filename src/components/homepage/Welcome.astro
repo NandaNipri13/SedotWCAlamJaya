@@ -1,91 +1,125 @@
 ---
+
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 ---
 
 <section class="section section-welcome">
   <div class="container">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- Image -->
       <Image
-        src="/img/img2.webp"
-        alt=""
+        src="/img/mobil1.jpeg"
+        alt="Jasa sedot WC Alam Jaya Tangerang profesional 24 jam"
         width="535"
         height="442"
         format="webp"
         quality={45}
-        class="w-auto h-auto"
+        class="w-auto h-auto rounded-xl"
       />
+
+      <!-- Content -->
       <div>
-        <h2>Welcome To Our Pro-cleaning Company!</h2>
-        <p>
-          We make your space shine! Professional and reliable cleaning service
-          company providing top-notch solutions for homes and businesses.
-          Satisfaction guaranteed!"
+
+        <p class="mb-3 text-main font-semibold">
+          Jasa Sedot WC Alam Jaya Tangerang
         </p>
+
+        <h2>
+          Layanan Sedot WC Profesional & Terpercaya di Tangerang
+        </h2>
+
+        <p>
+          Sedot WC Alam Jaya merupakan jasa sedot WC terpercaya yang melayani
+          wilayah Tangerang dan sekitarnya. Kami menyediakan layanan penyedotan
+          septic tank, WC mampet, saluran pembuangan tersumbat, serta perawatan
+          sanitasi untuk rumah, kantor, ruko, restoran, apartemen, dan kawasan
+          industri.
+        </p>
+
+        <p class="mt-4">
+          Dengan armada yang siap beroperasi 24 jam, kami memberikan pelayanan
+          cepat, aman, dan profesional dengan harga yang transparan untuk
+          membantu mengatasi berbagai masalah saluran pembuangan Anda.
+        </p>
+
+
         <div class="grid grid-cols-1 sm:grid-cols-2 my-6 gap-4">
-          <div
-            class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark dark:bg-dark p-4 rounded gap-4"
-          >
-            <div
-              class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5"
-            >
+
+          <div class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4">
+            <div class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5">
               <Icon name="lucide:check" />
             </div>
-            <p class="font-semibold text-lg">Vetted professionals</p>
+            <p class="font-semibold text-lg">
+              Melayani 24 Jam
+            </p>
           </div>
 
-          <div
-            class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4"
-          >
-            <div
-              class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5"
-            >
+
+          <div class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4">
+            <div class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5">
               <Icon name="lucide:check" />
             </div>
-            <p class="font-semibold text-lg">Next day availability</p>
+            <p class="font-semibold text-lg">
+              Area Tangerang & Sekitar
+            </p>
           </div>
 
-          <div
-            class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4"
-          >
-            <div
-              class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5"
-            >
+
+          <div class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4">
+            <div class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5">
               <Icon name="lucide:check" />
             </div>
-            <p class="font-semibold text-lg">Standard cleaning tasks</p>
+            <p class="font-semibold text-lg">
+              Teknisi Berpengalaman
+            </p>
           </div>
 
-          <div
-            class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4"
-          >
-            <div
-              class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5"
-            >
+
+          <div class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4">
+            <div class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5">
               <Icon name="lucide:check" />
             </div>
-            <p class="font-semibold text-lg">Best Quality</p>
+            <p class="font-semibold text-lg">
+              Harga Terjangkau
+            </p>
           </div>
-          <div
-            class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4"
-          >
-            <div
-              class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5"
-            >
+
+
+          <div class="grid grid-cols-[20px_1fr] items-center bg-gray-50 dark:bg-dark p-4 rounded gap-4">
+            <div class="bg-main text-white rounded-full flex items-center justify-center w-5 h-5">
               <Icon name="lucide:check" />
             </div>
-            <p class="font-semibold text-lg">Affordable Prices</p>
+            <p class="font-semibold text-lg">
+              Respon Cepat
+            </p>
           </div>
+
         </div>
+
+
         <div class="mt-6 grid grid-cols-2 gap-4 max-w-sm mx-auto sm:mx-0">
+
           <a
-            href="#"
+            href="https://wa.me/6289531934761"
+            target="_blank"
             class="btn bg-main border-main text-white rounded-lg hover:bg-green-600"
-            >Book Now</a
           >
-          <a href="#" class="btn btn-outline rounded-lg">Know More</a>
+            Hubungi Kami
+          </a>
+
+          <a
+            href="#layanan"
+            class="btn btn-outline rounded-lg"
+          >
+            Lihat Layanan
+          </a>
+
         </div>
+
       </div>
+
     </div>
   </div>
 </section>

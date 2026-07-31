@@ -26,7 +26,6 @@ export const NAV_MENU = [
     url: "#feedback",
   },
 
-
   {
     title: "Kontak",
     url: "#contact",

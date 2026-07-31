@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Swiper from "../Swiper.astro";
+import { reviews } from "../../data/reviews";
+
 ---
 
 <section class="section section-reviews">
@@ -25,138 +27,50 @@ import Swiper from "../Swiper.astro";
           prev="swiper-prev"
           next="swiper-next"
         >
-          <div class="swiper-slide">
-            <article
-              class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
-            >
-              <Image
-                src="/img/comments/cmnt1.webp"
-                alt=""
-                format="webp"
-                quality={45}
-                width="100"
-                height="100"
-                class="w-full h-auto max-w-25"
-              />
-              <div class="grid gap-0">
-                <div class="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <p class="text-lg font-semibold">Robert Fox</p>
-                    <p>Business Man</p>
-                  </div>
-                  <Image
-                    src="/img/icons/quote.svg"
-                    width="50"
-                    height="50"
-                    alt="quote"
-                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
-                  />
-                </div>
+        {
+  reviews.map((review) => (
+    <div class="swiper-slide">
+      <article
+        class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
+      >
+       <div
+        class="w-24 h-24 rounded-full bg-main text-white flex items-center justify-center text-3xl font-bold shrink-0">
+        {review.initial}
+      </div>
 
-                <div class="flex gap-1 items-center text-yellow-500 mt-2 mb-4">
-                  {
-                    Array.from({ length: 5 }).map((star) => (
-                      <Icon name="heroicons:star-solid" size={24} />
-                    ))
-                  }
-                </div>
+        <div class="grid gap-0">
+          <div class="flex flex-wrap justify-between items-center gap-4">
+            <div>
+              <p class="text-lg font-semibold">{review.name}</p>
+              <p>{review.role}</p>
+              <p class="text-xs text-gray-500">{review.time}</p>
+            </div>
 
-                <p class="text-sm">
-                  Excellent service! The team was punctual, thorough, and left
-                  my home sparkling clean. Highly recommend for anyone needing a
-                  reliable and detailed cleaning service
-                </p>
-              </div>
-            </article>
+            <Image
+              src="/img/icons/quote.svg"
+              width={50}
+              height={50}
+              alt="quote"
+              class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
+            />
           </div>
-          <div class="swiper-slide">
-            <article
-              class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
-            >
-              <Image
-                src="/img/comments/cmnt1.webp"
-                alt=""
-                format="webp"
-                quality={45}
-                width="100"
-                height="100"
-                class="w-full h-auto max-w-25"
-              />
-              <div class="grid gap-0">
-                <div class="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <p class="text-lg font-semibold">Robert Fox</p>
-                    <p>Business Man</p>
-                  </div>
-                  <Image
-                    src="/img/icons/quote.svg"
-                    width="50"
-                    height="50"
-                    alt="quote"
-                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
-                  />
-                </div>
 
-                <div class="flex gap-1 items-center text-yellow-500 mb-4">
-                  {
-                    Array.from({ length: 5 }).map((star) => (
-                      <Icon name="heroicons:star-solid" size={24} />
-                    ))
-                  }
-                </div>
-
-                <p class="text-sm">
-                  Excellent service! The team was punctual, thorough, and left
-                  my home sparkling clean. Highly recommend for anyone needing a
-                  reliable and detailed cleaning service
-                </p>
-              </div>
-            </article>
+          <div class="flex gap-1 items-center text-yellow-500 mt-2 mb-4">
+            {
+              Array.from({ length: review.rating }).map(() => (
+                <Icon name="heroicons:star-solid" size={24} />
+              ))
+            }
           </div>
-          <div class="swiper-slide">
-            <article
-              class="rounded-xl p-10 grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
-            >
-              <Image
-                src="/img/comments/cmnt1.webp"
-                alt=""
-                format="webp"
-                quality={45}
-                width="100"
-                height="100"
-                class="w-full h-auto max-w-25"
-              />
-              <div class="grid gap-0">
-                <div class="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <p class="text-lg font-semibold">Robert Fox</p>
-                    <p>Business Man</p>
-                  </div>
-                  <Image
-                    src="/img/icons/quote.svg"
-                    width="50"
-                    height="50"
-                    alt="quote"
-                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
-                  />
-                </div>
 
-                <div class="flex gap-1 items-center text-yellow-500 mb-4">
-                  {
-                    Array.from({ length: 5 }).map((star) => (
-                      <Icon name="heroicons:star-solid" size={24} />
-                    ))
-                  }
-                </div>
-
-                <p class="text-sm">
-                  Excellent service! The team was punctual, thorough, and left
-                  my home sparkling clean. Highly recommend for anyone needing a
-                  reliable and detailed cleaning service
-                </p>
-              </div>
-            </article>
-          </div>
+          <p class="text-sm">
+            {review.review}
+          </p>
+        </div>
+      </article>
+    </div>
+  ))
+}
         </Swiper>
       </div>
     </div>

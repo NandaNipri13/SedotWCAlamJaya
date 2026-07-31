@@ -17,22 +17,8 @@ import { Icon } from "astro-icon/components";
               <Icon name="lucide:phone-call" size={24} />
             </div>
             <div>
-              <p class="font-semibold text-lg mb-0">Call Us</p>
-              <a href="tel:+(08)255201888">+(08) 255 201 888</a>
-            </div>
-          </div>
-
-          <div
-            class="grid grid-cols-[54px_1fr] gap-4 items-center dark:bg-dark dark:border-dark bg-gray-50 border border-gray-200 rounded-lg p-4"
-          >
-            <div
-              class="bg-main text-white flex items-center justify-center rounded-full w-13.5 h-13.5"
-            >
-              <Icon name="lucide:mail" size={24} />
-            </div>
-            <div>
-              <p class="font-semibold text-lg mb-0">Email Now</p>
-              <a href="mailto:Hello@procleaning.com">Hello@procleaning.com</a>
+              <p class="font-semibold text-lg mb-0">Hubungi Kami</p>
+              <a href="https://wa.me/6289531934761">0889531934761</a>
             </div>
           </div>
 
@@ -45,10 +31,10 @@ import { Icon } from "astro-icon/components";
               <Icon name="lucide:map-pin" size={24} />
             </div>
             <div>
-              <p class="font-semibold text-lg mb-0">Address</p>
+              <p class="font-semibold text-lg mb-0">Alamat</p>
               <a href="#"
                 ><address class="not-italic">
-                  7510, Brand Tower, New York, USA
+                  Jl. Poris Residence blok C1 No19, RT.002/RW.009, Poris Plawad Utara, Kec. Cipondoh, Kota Tangerang, Banten 15122
                 </address></a
               >
             </div>
@@ -56,51 +42,84 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
       <div>
-        <p class="text-sm mb-0">Contact info</p>
-        <h3 class="font-semibold text-xl lg:text-[40px] mb-3">Keep In Touch</h3>
+        <p class="text-sm mb-0">Tanya Tanya terkait Layanan</p>
+        <h3 class="font-semibold text-xl lg:text-[40px] mb-3">Hubungi Kami</h3>
         <p class="">
-          We prioritize responding to your inquiries promptly to ensure you
-          receive the assistance you need in a timely manner
+          Hubungi kami melalui WhatsApp atau isi formulir di bawah ini.
+            Tim Sedot WC Alam Jaya siap melayani area Tangerang dan sekitarnya.
         </p>
 
-        <form action="/" method="POST" class="mt-8 grid gap-3">
-          <fieldset class="fieldset">
-            <input
-              type="text"
-              placeholder="Name"
-              class="input w-full validator"
-              id="contact-name"
-              name="contact_name"
-              required
-            />
-            <p class="validator-hint hidden">Required</p>
-          </fieldset>
-
-          <fieldset class="fieldset">
-            <input
-              type="text"
-              placeholder="Email"
-              class="input w-full validator"
-              id="contact-email"
-              name="contact_email"
-              required
-            />
-            <p class="validator-hint hidden">Required</p>
-          </fieldset>
-          <fieldset class="fieldset">
-            <textarea
-              class="textarea w-full validator"
-              placeholder="Message"
-              id="contact-msg"
-              name="contact_msg"
-              required></textarea>
-            <p class="validator-hint hidden">Required</p>
-          </fieldset>
-          <button
-            class="btn bg-main border-main text-white rounded-lg hover:bg-green-600 shadow-none lg:mr-auto"
-            type="submit">Sent Massage</button
+        <form
+            id="contact-form"
+            class="mt-8 grid gap-3"
           >
-        </form>
+            <fieldset class="fieldset">
+              <input
+                type="text"
+                placeholder="Nama"
+                class="input w-full validator"
+                id="contact-name"
+                name="contact_name"
+                required
+              />
+              <p class="validator-hint hidden">Required</p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <input
+                type="text"
+                placeholder="Nomor WhatsApp"
+                class="input w-full validator"
+                id="contact-phone"
+                name="contact_phone"
+                required
+              />
+              <p class="validator-hint hidden">Required</p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <textarea
+                class="textarea w-full validator"
+                placeholder="Pesan"
+                id="contact-msg"
+                name="contact_msg"
+                required
+              ></textarea>
+              <p class="validator-hint hidden">Required</p>
+            </fieldset>
+
+            <button
+              class="btn bg-main border-main text-white rounded-lg hover:bg-green-600 shadow-none lg:mr-auto"
+              type="submit"
+            >
+              💬 Kirim ke WhatsApp
+            </button>
+          </form>
+
+          <script is:inline>
+            const form = document.getElementById("contact-form");
+
+            form?.addEventListener("submit", (e) => {
+              e.preventDefault();
+
+              const name = document.getElementById("contact-name").value;
+              const phone = document.getElementById("contact-phone").value;
+              const message = document.getElementById("contact-msg").value;
+
+              const text = `Halo Sedot WC Alam Jaya,
+
+          Nama: ${name}
+          Nomor WhatsApp: ${phone}
+
+          Pesan:
+          ${message}`;
+
+              window.open(
+                `https://wa.me/6289531934761?text=${encodeURIComponent(text)}`,
+                "_blank"
+              );
+            });
+          </script>
       </div>
     </div>
   </div>

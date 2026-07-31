@@ -4,15 +4,25 @@ import type { HTMLAttributes } from "astro/types";
 type Props = HTMLAttributes<"a">;
 
 const { href, class: className, ...props } = Astro.props;
+
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
+
+// Jangan kasih active untuk anchor (#...)
+const isAnchor = typeof href === "string" && href.startsWith("#");
+const isActive =
+  !isAnchor && (href === pathname || href === "/" + (subpath?.[0] || ""));
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
   <slot />
 </a>
+
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   a.active {
     color: var(--color-main);
   }

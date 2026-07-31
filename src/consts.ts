@@ -20,14 +20,13 @@ export const NAV_MENU = [
     title: "Area Layanan",
     url: "#area",
   },
+
   {
-    title: "Harga",
-    url: "#pricing",
+    title: "Review",
+    url: "#feedback",
   },
-  {
-    title: "FAQ",
-    url: "#faq",
-  },
+
+
   {
     title: "Kontak",
     url: "#contact",

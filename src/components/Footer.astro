@@ -3,64 +3,80 @@ const today = new Date();
 import Logo from "./Logo.astro";
 ---
 
-<footer class="footer bg-dark text-white gap-0 block">
+<footer 
+id="contact"
+class="footer bg-dark text-white gap-0 block">
   <div class="footer-top w-full py-20">
     <div class="container">
-      <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Company -->
         <div>
           <Logo mode="dark" />
-          <p class="mt-4">
-            Stay updated with our latest cleaning tips, service updates, and
-            helpful articles on maintaining a spotless home.
+
+          <p class="mt-4 leading-7 text-gray-300">
+            Sedot WC Alam Jaya melayani jasa sedot WC, sedot septic tank,
+            saluran mampet, dan layanan limbah domestik untuk wilayah
+            Tangerang dan sekitarnya dengan pelayanan cepat, profesional,
+            dan harga yang transparan.
           </p>
         </div>
-        <div class="grid grid-cols-2 gap-10">
-          <nav class="grid gap-3">
-            <h3 class="text-xl font-semibold">Company</h3>
-            <a href="#" class="hover:underline hover:text-main">About Us</a>
-            <a href="/service" class="hover:underline hover:text-main"
-              >Services</a
-            >
-            <a href="/team" class="hover:underline hover:text-main">Our Team</a>
-          </nav>
-          <nav class="grid gap-3">
-            <h3 class="text-xl font-semibold">Know More</h3>
-            <a href="#" class="hover:underline hover:text-main">Support</a>
-            <a href="/policy" class="hover:underline hover:text-main"
-              >Privacy Policy</a
-            >
-            <a href="/terms" class="hover:underline hover:text-main"
-              >Terms & conditions</a
-            >
-          </nav>
-        </div>
-        <div class="grid gap-3">
-          <h3 class="text-xl font-semibold">Newsletter</h3>
 
-          <form
-            action="/"
-            method="GET"
-            class="mt-3 grid gap-4 grid-cols-1 sm:grid-cols-[2fr_1fr] lg:grid-cols-1"
-          >
-            <input
-              type="text"
-              placeholder="Email Goes here"
-              class="input text-black dark:text-white w-full"
-              name="subcscribe_email"
-              id="subscribe-email"
-            />
-            <button
-              class="btn bg-main border-main text-white rounded-lg hover:bg-green-600 lg:mr-auto shadow-none"
-              type="submit">Send</button
-            >
-          </form>
+        <!-- Menu -->
+        <div class="grid grid-cols-2 gap-10">
+
+          <nav class="grid gap-3">
+            <h3 class="text-xl font-semibold">Menu</h3>
+
+            <a href="/" class="hover:text-main transition">Beranda</a>
+            <a href="/#about" class="hover:text-main transition">Layanan</a>
+            <a href="/#services" class="hover:text-main transition">Area Layanan</a>
+            <a href="/#contact" class="hover:text-main transition">Kontak Kami</a>
+          </nav>
+
+          <nav class="grid gap-3">
+            <h3 class="text-xl font-semibold">Kami Melayani</h3>
+
+            <span>Sedot WC</span>
+            <span>Sedot Septic Tank</span>
+            <span>Saluran Mampet</span>
+            <span>Limbah Domestik</span>
+          </nav>
+
         </div>
+
+        <!-- Contact -->
+        <div class="grid gap-4">
+
+          <h3 class="text-xl font-semibold">
+            Butuh Bantuan Kami?
+          </h3>
+
+          <p class="text-gray-300">
+            Melayani wilayah tangerang dan sekitarnya 24 jam
+          </p>
+
+          <a
+            href="https://wa.me/6289531934761"
+            target="_blank"
+            class="btn bg-main border-main text-white rounded-lg hover:bg-green-600 shadow-none lg:mr-auto"
+          >
+            💬 Hubungi ke WhatsApp
+          </a>
+
+          <div class="text-sm text-gray-400">
+            Fast Response • Professional Team • Transparent Pricing
+          </div>
+
+        </div>
+
       </div>
     </div>
   </div>
+
   <div class="footer-btm w-full">
-    <div class="container text-center border-t border-white py-10">
-      &copy; {today.getFullYear()} “Procleaning” All Rights Received
+    <div class="container text-center border-t border-white/20 py-8 text-sm text-gray-400">
+      © {today.getFullYear()} Sedot WC Alam Jaya. All Rights Reserved.
     </div>
   </div>
 </footer>
